@@ -1,0 +1,41 @@
+---
+import Portrait from "../images/kevares-morgans-portrait.png";
+const { ImageDescription } = Astro.props;
+---
+
+<style>
+  span {
+    font-family: "Fivo Sans Medium", sans-serif;
+  }
+
+  p {
+    top: 30px;
+    left: 0;
+    margin-left: 30px;
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+    white-space: nowrap;
+  }
+
+  img {
+    top: 5px;
+    left: 1rem;
+  }
+
+  .portrait-container {
+    background-color: var(--primary);
+    left: 33px;
+    border-top-left-radius: 0;
+    max-width: 230px;
+  }
+</style>
+
+<div>
+  <p class="f6 relative">
+    <span>Kevares Morgan</span> &mdash; Realtor&reg;
+  </p>
+
+  <div class="portrait-container relative br4">
+    <img class="relative" src={Portrait} alt={ImageDescription} width="230" />
+  </div>
+</div>

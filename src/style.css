@@ -1,0 +1,45 @@
+/* Import Tachyons CSS Library */
+@import url("https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css");
+
+/* Import Bootstrap Icons Library */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+/* Fivo Sans Font Family */
+@font-face {
+  font-family: "Fivo Sans Regular";
+  src: url("/fonts/FivoSans-Regular.otf");
+}
+
+@font-face {
+  font-family: "Fivo Sans Oblique";
+  src: url("/fonts/FivoSans-Oblique.otf");
+}
+
+@font-face {
+  font-family: "Fivo Sans Medium";
+  src: url("/fonts/FivoSans-Medium.otf");
+}
+
+@font-face {
+  font-family: "Fivo Sans Bold";
+  src: url("/fonts/FivoSans-Bold.otf");
+}
+
+/* Brand Colors */
+:root {
+  --primary: #ea481f;
+  --dark: #293241;
+}
+
+body {
+  font-family: "Fivo Sans Regular", sans-serif;
+  font-weight: 400;
+  color: var(--dark);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fivo Sans Bold", sans-serif;
+  font-weight: 700;
+}

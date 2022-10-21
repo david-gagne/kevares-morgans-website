@@ -1,0 +1,63 @@
+---
+import Logo from "../images/logo-coquelicot.svg";
+---
+
+<style>
+  i {
+    color: var(--dark);
+  }
+
+  a {
+    color: var(--dark);
+  }
+
+  @media screen and (max-width: 550px) {
+    nav#desktop-navigation {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 551px) {
+    nav#mobile-navigation {
+      display: none;
+    }
+
+    nav#desktop-navigation {
+      display: flex;
+    }
+
+    /* Position adjustment to align logo better with links items */
+    a {
+      top: 3px;
+    }
+  }
+</style>
+
+<header class="h4 flex justify-between items-center ph3">
+  <a class="relative" href="/"
+    ><img width="150" src={Logo} alt="Kevares Morgan's Stylized 'K' logo" />
+  </a>
+
+  <!-- Mobile Navigation -->
+  <nav id="mobile-navigation">
+    <i class="bi bi-list f2"></i>
+  </nav>
+
+  <!-- Tablet/Desktop Navigation -->
+  <nav id="desktop-navigation" class="items-center">
+    <ul class="list pl0">
+      <li class="dib ph2">
+        <a class="link" href="">About</a>
+      </li>
+      <li class="dib ph2">
+        <a class="link" href="">Specialties</a>
+      </li>
+      <li class="dib ph2">
+        <a class="link" href="">Process</a>
+      </li>
+      <li class="dib ph2">
+        <a class="link" href="">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
