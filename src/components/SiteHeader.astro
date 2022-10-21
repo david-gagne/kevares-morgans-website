@@ -1,5 +1,8 @@
 ---
 import Logo from "../images/logo-coquelicot.svg";
+import AtIcon from "../images/at-icon.svg";
+import PhoneIcon from "../images/phone-icon.svg";
+import InstagramIcon from "../images/instagram-icon.svg";
 ---
 
 <style>
@@ -52,17 +55,58 @@ import Logo from "../images/logo-coquelicot.svg";
   <nav id="desktop-navigation" class="items-center">
     <ul class="list pl0">
       <li class="dib ph3">
-        <a class="link" href="">About</a>
+        <a class="link dim" href="#about">About</a>
       </li>
       <li class="dib ph3">
-        <a class="link" href="">Specialties</a>
+        <a class="link dim" href="#specialties">Specialties</a>
       </li>
       <li class="dib ph3">
-        <a class="link" href="">Process</a>
+        <a class="link dim" href="#process">Process</a>
       </li>
       <li class="dib ph3">
-        <a class="link" href="">Contact</a>
+        <a class="link dim" href="#contact">Contact</a>
       </li>
     </ul>
   </nav>
 </header>
+
+<!-- Mobile Navigation Hamburger Menu -->
+<div class="bg-white vh-100">
+  <menu class="list pl0 flex justify-center flex-column tc f2">
+    <li class="pv3">
+      <a class="link" href="#about">About</a>
+    </li>
+    <li class="pv3">
+      <a class="link" href="#specialties">Specialties</a>
+    </li>
+    <li class="pv3">
+      <a class="link" href="#process">Process</a>
+    </li>
+    <li class="pv3">
+      <a class="link" href="#contact">Contact</a>
+    </li>
+  </menu>
+
+  <div class="mt4">
+    <div class="fl w-third tc">
+      <!-- email -->
+      <a class="link" href="">
+        <img src={AtIcon} alt="" width="24" />
+      </a>
+    </div>
+
+    <div class="fl w-third tc">
+      <!-- phone -->
+      <a class="link" href="">
+        <img src={PhoneIcon} alt="" width="24" />
+      </a>
+    </div>
+
+    <div class="fl w-third tc">
+      <!-- Instagram -->
+      <a class="link" href="">
+        <img src={InstagramIcon} alt="" width="24" />
+      </a>
+    </div>
+  </div>
+</div>

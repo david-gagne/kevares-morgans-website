@@ -10,22 +10,33 @@ const { ImageDescription } = Astro.props;
 
   p {
     top: 34px;
-    left: 27px;
+    left: 5px;
     transform: rotate(90deg);
     transform-origin: 0 0;
     white-space: nowrap;
   }
 
   img {
-    top: 5px;
+    top: 6.5px;
     left: 10%;
     width: 100%;
   }
 
   .portrait-container {
     background-color: var(--primary);
-    left: 33px;
+    left: 10px;
     border-top-left-radius: 0;
+    max-width: 85.7%;
+  }
+
+  @media screen and (min-width: 680px) {
+    .portrait-container {
+      left: 0;
+    }
+
+    p {
+      left: -5px;
+    }
   }
 </style>
 
@@ -34,7 +45,7 @@ const { ImageDescription } = Astro.props;
     <span>Kevares Morgan</span> &mdash; Realtor&reg;
   </p>
 
-  <div class="portrait-container relative br4 w-80">
+  <div class="portrait-container relative br4">
     <img class="relative" src={Portrait} alt={ImageDescription} />
   </div>
 </div>

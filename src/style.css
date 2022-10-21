@@ -25,10 +25,12 @@
   src: url("/fonts/FivoSans-Bold.otf");
 }
 
-/* Brand Colors */
 :root {
+  /* Brand Colors */
   --primary: #ea481f;
   --dark: #293241;
+
+  scroll-behavior: smooth;
 }
 
 body {

@@ -21,7 +21,11 @@ import "@fontsource/caramel";
     font-family: "Caramel", cursive;
   }
 
-  @media screen and (min-width: 37.5em) {
+  .portrait {
+    left: 4%;
+  }
+
+  @media screen and (min-width: 42.5em) {
     .portrait,
     .about-content {
       width: 50%;
@@ -41,16 +45,18 @@ import "@fontsource/caramel";
       how of the product or service.
     </p>
 
-    <PrimaryButton ButtonText="Let's Talk" />
+    <div class="w-100 flex justify-center">
+      <PrimaryButton ButtonText="Let's Talk" />
+    </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="ph3 pt4 pb5 bg-washed-yellow center br4">
+  <section id="about" class="ph3 pt4 pb5 center br4">
     <div class="mw8 center">
       <div class="cf">
-        <div class="portrait fl w-100 pr3-m pr3-l">
+        <div class="portrait relative fl w-100 pr3-m pr3-l">
           <Portrait
-            ImageDescription="Kevares Morgan smiling in a blue-gray business jacket and white dress shirt."
+            ImageDescription="Kevares Morgan, Real Estate Sales Professional."
           />
         </div>
 
@@ -80,7 +86,7 @@ import "@fontsource/caramel";
               written the the first-person.
             </p>
 
-            <div class="w-100 flex justify-center">
+            <div class="w-100">
               <PrimaryButton ButtonText="Let's Talk" />
             </div>
           </div>
@@ -90,7 +96,7 @@ import "@fontsource/caramel";
   </section>
 
   <!-- Specialties Section -->
-  <section id="specialties" class="ph3 pv4 mb5">
+  <section id="specialties" class="ph3 pv4">
     <div class="mw8 center">
       <p class="ttu eyebrow tracked">Specialties</p>
 
@@ -107,9 +113,9 @@ import "@fontsource/caramel";
               alt=""
             />
 
-            <h3 class="f5 f4-ns mb2">Residential Home Sales</h3>
+            <h3 class="f5 f4-ns mb2 lh-title">Residential Home Sales</h3>
 
-            <p class="f4-ns lh-copy mt0">
+            <p class="f4-ns lh-copy mt0 measure-narrow-l">
               I'm a paragraph that describes the specialty. I should be between
               three and five sentences. And I should be in written the the
               first-person.
@@ -123,9 +129,9 @@ import "@fontsource/caramel";
               alt=""
             />
 
-            <h3 class="f5 f4-ns mb2">Residential Investments</h3>
+            <h3 class="f5 f4-ns mb2 lh-title">Residential Investments</h3>
 
-            <p class="f4-ns lh-copy mt0">
+            <p class="f4-ns lh-copy mt0 measure-narrow-ns">
               I'm a paragraph that describes the specialty. I should be between
               three and five sentences. And I should be in written the the
               first-person.
@@ -143,9 +149,9 @@ import "@fontsource/caramel";
               alt=""
             />
 
-            <h3 class="f5 f4-ns mb2">Commercial Sales</h3>
+            <h3 class="f5 f4-ns mb2 lh-title">Commercial Sales</h3>
 
-            <p class="f4-ns lh-copy mt0">
+            <p class="f4-ns lh-copy mt0 measure-narrow-ns">
               I'm a paragraph that describes the specialty. I should be between
               three and five sentences. And I should be in written the the
               first-person.
@@ -158,9 +164,9 @@ import "@fontsource/caramel";
               alt=""
             />
 
-            <h3 class="f5 f4-ns mb2">Commercial Leasing</h3>
+            <h3 class="f5 f4-ns mb2 lh-title">Commercial Leasing</h3>
 
-            <p class="f4-ns lh-copy mt0">
+            <p class="f4-ns lh-copy mt0 measure-narrow-ns">
               I'm a paragraph that describes the specialty. I should be between
               three and five sentences. And I should be in written the the
               first-person.
@@ -172,7 +178,7 @@ import "@fontsource/caramel";
   </section>
 
   <!-- Process Section -->
-  <section id="process" class="ph3 pv4 bg-washed-yellow tc">
+  <section id="process" class="ph3 pv4 tc">
     <div class="mw8 center mv4">
       <p class="ttu eyebrow tracked">Process</p>
       <h2 class="f4 f3-ns lh-title mb5">
@@ -187,7 +193,7 @@ import "@fontsource/caramel";
   </section>
 
   <!-- Commitment Section -->
-  <section id="commitment" class="ph3 pv4 mv5">
+  <section id="commitment" class="ph3 pv4 mv3">
     <div class="center w-100 h-100 mw6 flex items-center justify-center">
       <div class="ph3">
         <h4 class="f2 f1-ns normal mv0">My Commitment to You</h4>
@@ -205,7 +211,7 @@ import "@fontsource/caramel";
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="ph3 pv5 bg-washed-yellow">
+  <section id="contact" class="ph3 pv5">
     <div class="mw6 center">
       <p class="ttu eyebrow tracked tc">Contact</p>
 
@@ -219,4 +225,6 @@ import "@fontsource/caramel";
       </div>
     </div>
   </section>
+
+  <hr class="mw8" />
 </Layout>
