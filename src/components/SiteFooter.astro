@@ -4,27 +4,35 @@ import PhoneIcon from "../images/phone-icon.svg";
 import InstagramIcon from "../images/instagram-icon.svg";
 ---
 
-<footer class="h4 flex justify-center items-center">
+<footer class="h4 flex justify-center items-center relative bottom-0 mv4">
   <div>
-    <div class="fl w-third pa4 tc">
-      <!-- email -->
-      <a class="link" href="">
-        <img src={AtIcon} alt="" width="24" />
-      </a>
+    <div class="mt4">
+      <div class="fl w-third ph4 tc">
+        <!-- email -->
+        <a class="link" href="">
+          <img src={AtIcon} alt="" width="24" />
+        </a>
+      </div>
+
+      <div class="fl w-third ph4 tc">
+        <!-- phone -->
+        <a class="link" href="">
+          <img src={PhoneIcon} alt="" width="24" />
+        </a>
+      </div>
+
+      <div class="fl w-third ph4 tc">
+        <!-- Instagram -->
+        <a class="link" href="">
+          <img src={InstagramIcon} alt="" width="24" />
+        </a>
+      </div>
     </div>
 
-    <div class="fl w-third pa4 tc">
-      <!-- phone -->
-      <a class="link" href="">
-        <img src={PhoneIcon} alt="" width="24" />
-      </a>
-    </div>
-
-    <div class="fl w-third pa4 tc">
-      <!-- Instagram -->
-      <a class="link" href="">
-        <img src={InstagramIcon} alt="" width="24" />
-      </a>
+    <div class="w-100 flex justify-center items-center">
+      <p class="f6 tc w-100 ma0 mt5">
+        &copy; {new Date().getFullYear()} Kevares Morgan
+      </p>
     </div>
   </div>
 </footer>

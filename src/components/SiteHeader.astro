@@ -11,13 +11,13 @@ import Logo from "../images/logo-coquelicot.svg";
     color: var(--dark);
   }
 
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 729px) {
     nav#desktop-navigation {
       display: none;
     }
   }
 
-  @media screen and (min-width: 551px) {
+  @media screen and (min-width: 730px) {
     nav#mobile-navigation {
       display: none;
     }
@@ -33,9 +33,14 @@ import Logo from "../images/logo-coquelicot.svg";
   }
 </style>
 
-<header class="h4 flex justify-between items-center ph3">
+<header class="h4 flex justify-between items-center ph3 mw8 center">
   <a class="relative" href="/"
-    ><img width="150" src={Logo} alt="Kevares Morgan's Stylized 'K' logo" />
+    ><img
+      class="w-70 w-60-ns"
+      width="150"
+      src={Logo}
+      alt="Kevares Morgan's Stylized 'K' logo"
+    />
   </a>
 
   <!-- Mobile Navigation -->
@@ -46,16 +51,16 @@ import Logo from "../images/logo-coquelicot.svg";
   <!-- Tablet/Desktop Navigation -->
   <nav id="desktop-navigation" class="items-center">
     <ul class="list pl0">
-      <li class="dib ph2">
+      <li class="dib ph3">
         <a class="link" href="">About</a>
       </li>
-      <li class="dib ph2">
+      <li class="dib ph3">
         <a class="link" href="">Specialties</a>
       </li>
-      <li class="dib ph2">
+      <li class="dib ph3">
         <a class="link" href="">Process</a>
       </li>
-      <li class="dib ph2">
+      <li class="dib ph3">
         <a class="link" href="">Contact</a>
       </li>
     </ul>

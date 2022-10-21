@@ -20,16 +20,23 @@ import "@fontsource/caramel";
   #commitment h4 {
     font-family: "Caramel", cursive;
   }
+
+  @media screen and (min-width: 37.5em) {
+    .portrait,
+    .about-content {
+      width: 50%;
+    }
+  }
 </style>
 
 <Layout>
   <!-- Hero Section -->
-  <section id="hero" class="ph3 pv5 tc mb5">
-    <h1 class="f3 lh-title">
+  <section id="hero" class="ph3 tc mb5">
+    <h1 class="f3 f2-ns lh-title measure-narrow center">
       A heading so good it makes you want to keep reading.
     </h1>
 
-    <p class="lh-copy">
+    <p class="f4-ns lh-copy pv3 measure center">
       I'm a descriptive text that further communicates the who, what, why, and
       how of the product or service.
     </p>
@@ -38,34 +45,36 @@ import "@fontsource/caramel";
   </section>
 
   <!-- About Section -->
-  <section id="about" class="ph3 pv5 bg-washed-yellow">
+  <section id="about" class="ph3 pt4 pb5 bg-washed-yellow center br4">
     <div class="mw8 center">
       <div class="cf">
-        <div class="fl w-100 w-50-m w-50-l pr3-m pr3-l">
+        <div class="portrait fl w-100 pr3-m pr3-l">
           <Portrait
             ImageDescription="Kevares Morgan smiling in a blue-gray business jacket and white dress shirt."
           />
         </div>
 
-        <div class="fl w-100 w-50-m w-50-l pl3-m pl3-l">
+        <div class="about-content fl w-100 pl3-m pl3-l">
           <div class="mt5">
             <p class="ttu eyebrow tracked">About</p>
 
-            <h2 class="f4 lh-title">A clever, punchy section intro title.</h2>
+            <h2 class="f4 f3-ns lh-title">
+              A clever, punchy section intro title.
+            </h2>
 
-            <p class="lh-copy">
+            <p class="f4-ns lh-copy">
               I'm a paragraph that showcases the subject's <em>education</em>. I
               should be between three and five sentences. And I should be in
               written the the first-person.
             </p>
 
-            <p class="lh-copy">
+            <p class="f4-ns lh-copy">
               I'm a paragraph that showcases the subject's <em>experience</em>.
               I should be between three and five sentences. And I should be in
               written the the first-person.
             </p>
 
-            <p class="lh-copy">
+            <p class="f4-ns lh-copy">
               I'm a paragraph that showcases the subject's <em>credentials</em>.
               I should be between three and five sentences. And I should be in
               written the the first-person.
@@ -85,7 +94,9 @@ import "@fontsource/caramel";
     <div class="mw8 center">
       <p class="ttu eyebrow tracked">Specialties</p>
 
-      <h2 class="f4 lh-title">A clever, punchy section intro title.</h2>
+      <h2 class="f4 f3-ns lh-title mb5">
+        A clever, punchy section intro title.
+      </h2>
 
       <div class="center">
         <div class="cf">
@@ -96,9 +107,9 @@ import "@fontsource/caramel";
               alt=""
             />
 
-            <h3 class="f5 mb2">Residential Home Sales</h3>
+            <h3 class="f5 f4-ns mb2">Residential Home Sales</h3>
 
-            <p class="lh-copy mt0">
+            <p class="f4-ns lh-copy mt0">
               I'm a paragraph that describes the specialty. I should be between
               three and five sentences. And I should be in written the the
               first-person.
@@ -112,9 +123,9 @@ import "@fontsource/caramel";
               alt=""
             />
 
-            <h3 class="f5 mb2">Residential Investments</h3>
+            <h3 class="f5 f4-ns mb2">Residential Investments</h3>
 
-            <p class="lh-copy mt0">
+            <p class="f4-ns lh-copy mt0">
               I'm a paragraph that describes the specialty. I should be between
               three and five sentences. And I should be in written the the
               first-person.
@@ -132,9 +143,9 @@ import "@fontsource/caramel";
               alt=""
             />
 
-            <h3 class="f5 mb2">Commercial Sales</h3>
+            <h3 class="f5 f4-ns mb2">Commercial Sales</h3>
 
-            <p class="lh-copy mt0">
+            <p class="f4-ns lh-copy mt0">
               I'm a paragraph that describes the specialty. I should be between
               three and five sentences. And I should be in written the the
               first-person.
@@ -147,9 +158,9 @@ import "@fontsource/caramel";
               alt=""
             />
 
-            <h3 class="f5 mb2">Commercial Leasing</h3>
+            <h3 class="f5 f4-ns mb2">Commercial Leasing</h3>
 
-            <p class="lh-copy mt0">
+            <p class="f4-ns lh-copy mt0">
               I'm a paragraph that describes the specialty. I should be between
               three and five sentences. And I should be in written the the
               first-person.
@@ -164,7 +175,9 @@ import "@fontsource/caramel";
   <section id="process" class="ph3 pv4 bg-washed-yellow tc">
     <div class="mw8 center mv4">
       <p class="ttu eyebrow tracked">Process</p>
-      <h2 class="f4 lh-title mb5">A clever, punchy section intro title.</h2>
+      <h2 class="f4 f3-ns lh-title mb5">
+        A clever, punchy section intro title.
+      </h2>
 
       <Carousel
         ProcessStep="01 Listen"
@@ -177,8 +190,8 @@ import "@fontsource/caramel";
   <section id="commitment" class="ph3 pv4 mv5">
     <div class="center w-100 h-100 mw6 flex items-center justify-center">
       <div class="ph3">
-        <h4 class="f2 normal mv0">My Commitment to You</h4>
-        <p class="lh-copy">
+        <h4 class="f2 f1-ns normal mv0">My Commitment to You</h4>
+        <p class="f4-ns lh-copy">
           <em
             >A thoughtful and heartfelt dedication to your clients that lets
             them know you care.</em
@@ -196,7 +209,7 @@ import "@fontsource/caramel";
     <div class="mw6 center">
       <p class="ttu eyebrow tracked tc">Contact</p>
 
-      <h2 class="f4 lh-title mb4 tc">
+      <h2 class="f4 f3-ns lh-title mb3 tc">
         A final call-to-action that resonates with your client's finished story
         benefit.
       </h2>

@@ -3,7 +3,7 @@ const { ButtonText } = Astro.props;
 ---
 
 <style>
-  button {
+  a {
     font-family: "Fivo Sans Medium", sans-serif;
     font-weight: 500;
     background-color: var(--primary);
@@ -12,8 +12,9 @@ const { ButtonText } = Astro.props;
   }
 </style>
 
-<button class="tc white bn br4 mv2">
-  <a class="link white" href="">
-    {ButtonText}
-  </a>
-</button>
+<a
+  class="link white tc bn br4 mv3 flex justify-center items-center center ttu tracked"
+  href=""
+>
+  {ButtonText}
+</a>
