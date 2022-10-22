@@ -14,6 +14,56 @@ import InstagramIcon from "../images/instagram-icon.svg";
     color: var(--dark);
   }
 
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--dark);
+    transition: transform 250ms;
+  }
+
+  span::before {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--dark);
+    content: "";
+    top: 56px;
+    transition: transform 250ms;
+  }
+
+  span::after {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--dark);
+    content: "";
+    top: 49px;
+    transition-property: top, transform;
+    transition-duration: 250ms;
+  }
+
+  span.isActive {
+    background: none;
+  }
+
+  span.isActive::before {
+    top: 56px;
+    transform: rotate(45deg);
+  }
+
+  span.isActive::after {
+    top: 56px;
+    transform: rotate(-45deg);
+  }
+
+  #mobile-menu {
+    height: 0;
+    transition: height 250ms;
+  }
+
   @media screen and (max-width: 729px) {
     nav#desktop-navigation {
       display: none;
@@ -36,6 +86,50 @@ import InstagramIcon from "../images/instagram-icon.svg";
   }
 </style>
 
+<script>
+  let mobileNavButton = document.getElementById("mobile-navigation-button"),
+    mobileMenu = document.getElementById("mobile-menu"),
+    hamburgerIcon = document.querySelector(
+      "#mobile-navigation-button > div > span"
+    );
+
+  mobileNavButton.addEventListener("click", function (event) {
+    // Step 1. Display mobile menu when visitor clicks the hamburger menu button
+    if (mobileMenu.classList.contains("dn")) {
+      hamburgerIcon.classList.add("isActive");
+      mobileMenu.classList.remove("dn");
+
+      // Step 1a. Lock the overflow on the body when mobile menu is active.
+      document.body.classList.add("overflow-hidden");
+
+      setTimeout(() => {
+        mobileMenu.style.height = "100vh";
+      }, 100);
+    } else {
+      // Step 2. Hide the mobile menu when visitor clicks the hamburger menu button
+      hamburgerIcon.classList.remove("isActive");
+      mobileMenu.style.height = "0";
+
+      // Step 2a. Unlock the overflow on the body when mobile menu is active.
+      document.body.classList.remove("overflow-hidden");
+
+      setTimeout(() => {
+        mobileMenu.classList.add("dn");
+      }, 100);
+    }
+  });
+
+  // Step 3. Hide the mobile menu when a visitor clicks somewhere on the mobile menu element or any of its child elements
+  mobileMenu.addEventListener("click", function (event) {
+    hamburgerIcon.classList.remove("isActive");
+    mobileMenu.style.height = "0";
+
+    setTimeout(() => {
+      mobileMenu.classList.add("dn");
+    }, 300);
+  });
+</script>
+
 <header class="h4 flex justify-between items-center ph3 mw8 center">
   <a class="relative" href="/"
     ><img
@@ -47,8 +141,10 @@ import InstagramIcon from "../images/instagram-icon.svg";
   </a>
 
   <!-- Mobile Navigation -->
-  <nav id="mobile-navigation">
-    <i class="bi bi-list f2"></i>
+  <nav id="mobile-navigation-button" class="flex items-center w2 h2 pa2">
+    <div>
+      <span></span>
+    </div>
   </nav>
 
   <!-- Tablet/Desktop Navigation -->
@@ -70,9 +166,9 @@ import InstagramIcon from "../images/instagram-icon.svg";
   </nav>
 </header>
 
-<!-- Mobile Navigation Hamburger Menu -->
-<div class="bg-white vh-100">
-  <menu class="list pl0 flex justify-center flex-column tc f2">
+<!-- Mobile Navigation Offcanvas Menu -->
+<div id="mobile-menu" class="bg-white z-9999 overflow-hidden dn">
+  <menu class="list pl0 flex justify-center flex-column tc f2 mt0">
     <li class="pv3">
       <a class="link" href="#about">About</a>
     </li>
@@ -87,22 +183,22 @@ import InstagramIcon from "../images/instagram-icon.svg";
     </li>
   </menu>
 
-  <div class="mt4">
-    <div class="fl w-third tc">
+  <div class="mt4 flex justify-center items-center">
+    <div class="ph3">
       <!-- email -->
       <a class="link" href="">
         <img src={AtIcon} alt="" width="24" />
       </a>
     </div>
 
-    <div class="fl w-third tc">
+    <div class="ph3">
       <!-- phone -->
       <a class="link" href="">
         <img src={PhoneIcon} alt="" width="24" />
       </a>
     </div>
 
-    <div class="fl w-third tc">
+    <div class="ph3">
       <!-- Instagram -->
       <a class="link" href="">
         <img src={InstagramIcon} alt="" width="24" />
