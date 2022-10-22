@@ -4,8 +4,6 @@ import PrimaryButton from "../components/PrimaryButton.astro";
 import Portrait from "../components/Portrait.astro";
 import Carousel from "../components/Carousel.astro";
 import "@fontsource/caramel";
-
-import ResidentialHomeSalesIcon from "../images/residential-home-sales-icon.svg";
 ---
 
 <style>
@@ -15,16 +13,47 @@ import ResidentialHomeSalesIcon from "../images/residential-home-sales-icon.svg"
     font-weight: 500;
   }
 
-  .icon {
-    border-top-right-radius: 0;
-  }
-
   #commitment h4 {
     font-family: "Caramel", cursive;
   }
 
   .portrait {
     left: 4%;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 0;
+    background-color: var(--primary);
+  }
+
+  .icon--residential-home-sales {
+    background-image: url("../images/residential-home-sales-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+  }
+
+  .icon--residential-investments {
+    background-image: url("../images/residential-investments-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+  }
+
+  .icon--commercial-sales {
+    background-image: url("../images/commercial-sales-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+  }
+
+  .icon--commercial-leasing {
+    background-image: url("../images/commercial-leasing-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
   }
 
   @media screen and (min-width: 42.5em) {
@@ -200,12 +229,7 @@ import ResidentialHomeSalesIcon from "../images/residential-home-sales-icon.svg"
       <div class="center">
         <div class="cf">
           <div class="fl w-100 w-50-ns pv2 pr3-ns">
-            <img
-              class="icon br3"
-              width="60"
-              src={ResidentialHomeSalesIcon}
-              alt=""
-            />
+            <div class="icon icon--residential-home-sales br3"></div>
 
             <h3 class="f5 f4-ns mb2 lh-title">Residential Home Sales</h3>
 
@@ -217,11 +241,7 @@ import ResidentialHomeSalesIcon from "../images/residential-home-sales-icon.svg"
           </div>
 
           <div class="fl w-100 w-50-ns pv2 pl3-ns">
-            <img
-              class="icon br3"
-              src="https://via.placeholder.com/50x50"
-              alt=""
-            />
+            <div class="icon icon--residential-investments br3"></div>
 
             <h3 class="f5 f4-ns mb2 lh-title">Residential Investments</h3>
 
@@ -237,11 +257,7 @@ import ResidentialHomeSalesIcon from "../images/residential-home-sales-icon.svg"
       <div class="center">
         <div class="cf">
           <div class="fl w-100 w-50-ns pv2 pr3-ns">
-            <img
-              class="icon br3"
-              src="https://via.placeholder.com/50x50"
-              alt=""
-            />
+            <div class="icon icon--commercial-sales br3"></div>
 
             <h3 class="f5 f4-ns mb2 lh-title">Commercial Sales</h3>
 
@@ -252,11 +268,7 @@ import ResidentialHomeSalesIcon from "../images/residential-home-sales-icon.svg"
             </p>
           </div>
           <div class="fl w-100 w-50-ns pv2 pl3-ns">
-            <img
-              class="icon br3"
-              src="https://via.placeholder.com/50x50"
-              alt=""
-            />
+            <div class="icon icon--commercial-leasing br3"></div>
 
             <h3 class="f5 f4-ns mb2 lh-title">Commercial Leasing</h3>
 
