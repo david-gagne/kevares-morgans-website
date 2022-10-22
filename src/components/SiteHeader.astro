@@ -71,7 +71,7 @@ import InstagramIcon from "../images/instagram-icon.svg";
   }
 
   @media screen and (min-width: 730px) {
-    nav#mobile-navigation {
+    nav#mobile-navigation-button {
       display: none;
     }
 
@@ -110,7 +110,7 @@ import InstagramIcon from "../images/instagram-icon.svg";
       hamburgerIcon.classList.remove("isActive");
       mobileMenu.style.height = "0";
 
-      // Step 2a. Unlock the overflow on the body when mobile menu is active.
+      // Step 2a. Unlock the overflow on the body when mobile menu is not active.
       document.body.classList.remove("overflow-hidden");
 
       setTimeout(() => {
@@ -123,6 +123,9 @@ import InstagramIcon from "../images/instagram-icon.svg";
   mobileMenu.addEventListener("click", function (event) {
     hamburgerIcon.classList.remove("isActive");
     mobileMenu.style.height = "0";
+
+    // Step 3a. Unlock the overflow on the body when mobile menu is not active.
+    document.body.classList.remove("overflow-hidden");
 
     setTimeout(() => {
       mobileMenu.classList.add("dn");
@@ -141,7 +144,7 @@ import InstagramIcon from "../images/instagram-icon.svg";
   </a>
 
   <!-- Mobile Navigation -->
-  <nav id="mobile-navigation-button" class="flex items-center w2 h2 pa2">
+  <nav id="mobile-navigation-button" class="flex items-center w2 h2">
     <div>
       <span></span>
     </div>
@@ -151,16 +154,16 @@ import InstagramIcon from "../images/instagram-icon.svg";
   <nav id="desktop-navigation" class="items-center">
     <ul class="list pl0">
       <li class="dib ph3">
-        <a class="link dim" href="#about">About</a>
+        <a class="link dim" href="/#about">About</a>
       </li>
       <li class="dib ph3">
-        <a class="link dim" href="#specialties">Specialties</a>
+        <a class="link dim" href="/#specialties">Specialties</a>
       </li>
       <li class="dib ph3">
-        <a class="link dim" href="#process">Process</a>
+        <a class="link dim" href="/#process">Process</a>
       </li>
       <li class="dib ph3">
-        <a class="link dim" href="#contact">Contact</a>
+        <a class="link dim" href="/#contact">Contact</a>
       </li>
     </ul>
   </nav>
