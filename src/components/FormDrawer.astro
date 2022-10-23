@@ -6,14 +6,83 @@ import ThankYouVideo from "../images/placeholder.mp4";
   video {
     border-top-right-radius: 0 !important;
   }
+
+  #form-drawer {
+    left: 100%;
+    transition-property: left;
+    transition-duration: 250ms;
+  }
+
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--dark);
+    transition: transform 250ms;
+  }
+
+  span::before {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--dark);
+    content: "";
+    top: 28px;
+    transition: transform 250ms;
+  }
+
+  span::after {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--dark);
+    content: "";
+    top: 22px;
+    transition-property: top, transform;
+    transition-duration: 250ms;
+  }
+
+  span.isActive {
+    background: none;
+  }
+
+  span.isActive::before {
+    top: 31px;
+    transform: rotate(45deg);
+  }
+
+  span.isActive::after {
+    top: 31px;
+    transform: rotate(-45deg);
+  }
 </style>
+
+<script>
+  let formDrawer = document.getElementById("form-drawer");
+  let toggle = document.getElementById("toggle");
+
+  toggle.addEventListener("click", function (event) {
+    formDrawer.style.left = "100%";
+
+    setTimeout(() => {
+      formDrawer.classList.remove("flex");
+      formDrawer.classList.add("dn");
+    }, 200);
+
+    document.body.classList.remove("overflow-hidden");
+  });
+</script>
 
 <div
   id="form-drawer"
-  class="w-100 vh-100 bg-white z-999 justify-center pa3 absolute top-0 overflow-scroll dn"
+  class="w-100 vh-100 bg-white z-999 justify-center pa3 top-0 fixed overflow-scroll dn"
 >
   <div class="w-100 mw7 center">
-    <a href="/">Back Home</a>
+    <div class="w-100 h2">
+      <span id="toggle" class="fr isActive"></span>
+    </div>
 
     <!-- video -->
     <div class="mt4">

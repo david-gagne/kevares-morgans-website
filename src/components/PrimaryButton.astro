@@ -10,10 +10,22 @@ const { ButtonText } = Astro.props;
   for (let i = 0; i < ctaButtons.length; i++) {
     ctaButtons[i].addEventListener("click", function (event) {
       if (formDrawer.classList.contains("dn")) {
-        formDrawer.classList.replace("dn", "flex");
+        formDrawer.classList.remove("dn");
+        formDrawer.classList.add("flex");
+
+        setTimeout(() => {
+          formDrawer.style.left = "0";
+        }, 200);
+
         document.body.classList.add("overflow-hidden");
       } else {
-        formDrawer.classList.replace("flex", "dn");
+        formDrawer.style.left = "100%";
+
+        setTimeout(() => {
+          formDrawer.classList.remove("flex");
+          formDrawer.classList.add("dn");
+        }, 200);
+
         document.body.classList.remove("overflow-hidden");
       }
     });
