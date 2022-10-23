@@ -2,8 +2,26 @@
 const { ButtonText } = Astro.props;
 ---
 
+<!-- CONTACT MODAL BUTTON -->
+<script>
+  let ctaButtons = document.getElementsByClassName("button button--cta");
+  let formDrawer = document.getElementById("form-drawer");
+
+  for (let i = 0; i < ctaButtons.length; i++) {
+    ctaButtons[i].addEventListener("click", function (event) {
+      if (formDrawer.classList.contains("dn")) {
+        formDrawer.classList.replace("dn", "flex");
+        document.body.classList.add("overflow-hidden");
+      } else {
+        formDrawer.classList.replace("flex", "dn");
+        document.body.classList.remove("overflow-hidden");
+      }
+    });
+  }
+</script>
+
 <style>
-  a {
+  button {
     font-family: "Fivo Sans Medium", sans-serif;
     font-weight: 500;
     background-color: var(--primary);
@@ -12,9 +30,8 @@ const { ButtonText } = Astro.props;
   }
 </style>
 
-<a
-  class="link white tc bn br4 flex justify-center items-center ttu tracked"
-  href=""
+<button
+  class="button button--cta white tc bn br4 flex justify-center items-center ttu tracked pointer"
 >
   {ButtonText}
-</a>
+</button>
