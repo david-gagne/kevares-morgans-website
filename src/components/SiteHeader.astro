@@ -87,11 +87,12 @@ import InstagramIcon from "../images/instagram-icon.svg";
 </style>
 
 <script>
-  let mobileNavButton = document.getElementById("mobile-navigation-button"),
-    mobileMenu = document.getElementById("mobile-menu"),
-    hamburgerIcon = document.querySelector(
-      "#mobile-navigation-button > div > span"
-    );
+  // Mobile Navigation Variables
+  let mobileNavButton = document.getElementById("mobile-navigation-button");
+  let mobileMenu = document.getElementById("mobile-menu");
+  let hamburgerIcon = document.querySelector(
+    "#mobile-navigation-button > div > span"
+  );
 
   mobileNavButton.addEventListener("click", function (event) {
     // Step 1. Display mobile menu when visitor clicks the hamburger menu button
