@@ -12,6 +12,7 @@ import ThankYouVideo from "../images/placeholder.mp4";
     /* left: 100%; */
     transition-property: left;
     transition-duration: 250ms;
+    height: 120vh;
   }
 
   span {
@@ -60,16 +61,16 @@ import ThankYouVideo from "../images/placeholder.mp4";
   }
 
   .form-container {
-    background-color: var(--primary);
+    background-color: var(--dark);
     border-top-left-radius: 0;
   }
 
-  fieldset {
-    border: none;
-    border-left: 5px solid white;
+  input {
+    border-color: var(--dark);
   }
 
-  legend {
+  input[type="submit"] {
+    background-color: var(--primary);
     font-family: "Fivo Sans Medium", sans-serif;
   }
 </style>
@@ -92,19 +93,19 @@ import ThankYouVideo from "../images/placeholder.mp4";
 
 <div
   id="form-drawer"
-  class="w-100 vh-100 bg-white z-999 justify-center pa3 top-0 fixed overflow-scroll dn"
+  class="w-100 bg-white z-999 justify-center ph0 top-0 fixed pb6 dn"
 >
-  <div class="w-100 mw7 center">
-    <div class="w-100 h2">
+  <div class="w-100 mw7 center overflow-scroll ph3 ph5-ns pb6">
+    <div class="w-100 h2 relative top-0">
       <span id="toggle" class="fr isActive"></span>
     </div>
 
-    <h2 class="f3 f2-ns lh-title">Contact Form Modal Title</h2>
+    <h2 class="f3 f3-ns lh-title tc">Contact Kevares Morgan</h2>
 
     <!-- video -->
     <div>
       <video
-        class="w-100 br4"
+        class="w-100 br4 mv3"
         controls
         width="268"
         playsinline
@@ -118,36 +119,88 @@ import ThankYouVideo from "../images/placeholder.mp4";
       qui culpa placeat, ducimus ad praesentium molestias aut eius.
     </p>
 
-    <div class="form-container mt4 pa2 white br4 mb5">
-      <h3 class="f3 ttu tracked">Let's Talk</h3>
-      <form class="pb5" action="">
-        <fieldset>
-          <legend class="outline-none">Subject</legend>
+    <hr class="mv4" />
 
-          <div class="mv3">
-            <label class="lh-copy" for="buyer"
+    <div class="form-container pa3 br4 white">
+      <form action="">
+        <h3 class="ttu tracked tc">New Client Intake</h3>
+
+        <fieldset>
+          <legend class="tc">How would you like to work with me?</legend>
+          <div class="mv4">
+            <label class="pb2 db" for="buyer"
               >Buy your next property with me.</label
             >
             <input
+              class="db pv4"
               type="radio"
-              name="client-relationship"
               id="buyer"
+              name="client-relationship"
               value="buyer"
             />
           </div>
 
-          <div>
-            <label class="lh-copy" for="buyer"
-              >Sell your next property with me.</label
+          <div class="mv4">
+            <label class="pb2 db" for="seller"
+              >Sell your property with me.</label
             >
             <input
+              class="db pv4"
               type="radio"
-              name="client-relationship"
               id="seller"
-              value="sller"
+              name="client-relationship"
+              value="seller"
             />
           </div>
         </fieldset>
+
+        <div class="mv4">
+          <label class="db mb2" for="first-name">First Name</label>
+          <input
+            class="w-100 pv2 pl2 br3 ba f5"
+            type="text"
+            name="first-name"
+            id="first-name"
+          />
+        </div>
+
+        <div class="mv4">
+          <label class="db mb2" for="last-name">Last Name</label>
+          <input
+            class="w-100 pv2 pl2 br3 ba f5"
+            type="text"
+            name="last-name"
+            id="last-name"
+          />
+        </div>
+
+        <div class="mv4">
+          <label class="db mb2" for="email">Email Address</label>
+          <input
+            class="w-100 pv2 pl2 br3 ba f5"
+            type="text"
+            name="email"
+            id="email"
+          />
+        </div>
+
+        <div class="mv4">
+          <label class="db mb2" for="phone">Phone Number</label>
+          <input
+            class="w-100 pv2 pl2 br3 ba b--black f5"
+            type="tel"
+            name="phone"
+            id="phone"
+          />
+        </div>
+
+        <div class="mt4">
+          <input
+            class="w-80 center db pa3 ba br4 white ttu"
+            type="submit"
+            value="Let's Talk"
+          />
+        </div>
       </form>
     </div>
   </div>
