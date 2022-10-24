@@ -8,7 +8,8 @@ import ThankYouVideo from "../images/placeholder.mp4";
   }
 
   #form-drawer {
-    left: 100%;
+    left: 0%;
+    /* left: 100%; */
     transition-property: left;
     transition-duration: 250ms;
   }
@@ -57,6 +58,20 @@ import ThankYouVideo from "../images/placeholder.mp4";
     top: 31px;
     transform: rotate(-45deg);
   }
+
+  .form-container {
+    background-color: var(--primary);
+    border-top-left-radius: 0;
+  }
+
+  fieldset {
+    border: none;
+    border-left: 5px solid white;
+  }
+
+  legend {
+    font-family: "Fivo Sans Medium", sans-serif;
+  }
 </style>
 
 <script>
@@ -84,8 +99,10 @@ import ThankYouVideo from "../images/placeholder.mp4";
       <span id="toggle" class="fr isActive"></span>
     </div>
 
+    <h2 class="f3 f2-ns lh-title">Contact Form Modal Title</h2>
+
     <!-- video -->
-    <div class="pt5 pb3">
+    <div>
       <video
         class="w-100 br4"
         controls
@@ -94,8 +111,6 @@ import ThankYouVideo from "../images/placeholder.mp4";
         src={ThankYouVideo}></video>
     </div>
 
-    <h2 class="f3 f2-ns lh-title">Kevares Morgan's Contact Form Modal Title</h2>
-
     <p class="f4-ns lh-copy">
       The transcript of what Kevares says in the video. Lorem ipsum dolor sit
       amet, consectetur adipisicing elit. Ab saepe mollitia iusto delectus
@@ -103,6 +118,37 @@ import ThankYouVideo from "../images/placeholder.mp4";
       qui culpa placeat, ducimus ad praesentium molestias aut eius.
     </p>
 
-    <form action=""></form>
+    <div class="form-container mt4 pa2 white br4 mb5">
+      <h3 class="f3 ttu tracked">Let's Talk</h3>
+      <form class="pb5" action="">
+        <fieldset>
+          <legend class="outline-none">Subject</legend>
+
+          <div class="mv3">
+            <label class="lh-copy" for="buyer"
+              >Buy your next property with me.</label
+            >
+            <input
+              type="radio"
+              name="client-relationship"
+              id="buyer"
+              value="buyer"
+            />
+          </div>
+
+          <div>
+            <label class="lh-copy" for="buyer"
+              >Sell your next property with me.</label
+            >
+            <input
+              type="radio"
+              name="client-relationship"
+              id="seller"
+              value="sller"
+            />
+          </div>
+        </fieldset>
+      </form>
+    </div>
   </div>
 </div>
