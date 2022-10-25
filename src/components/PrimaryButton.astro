@@ -11,22 +11,22 @@ const { ButtonText } = Astro.props;
     ctaButtons[i].addEventListener("click", function (event) {
       if (formDrawer.classList.contains("dn")) {
         formDrawer.classList.remove("dn");
-        formDrawer.classList.add("flex");
+        formDrawer.classList.add("db");
 
         setTimeout(() => {
-          formDrawer.style.left = "0";
+          formDrawer.style.left = "0%";
         }, 200);
 
-        document.body.classList.add("overflow-hidden");
+        document.body.style.overflow = "hidden";
       } else {
         formDrawer.style.left = "100%";
 
         setTimeout(() => {
-          formDrawer.classList.remove("flex");
+          formDrawer.classList.remove("db");
           formDrawer.classList.add("dn");
         }, 200);
 
-        document.body.classList.remove("overflow-hidden");
+        document.body.style.overflow = "scroll";
       }
     });
   }

@@ -41,7 +41,14 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
   font-family: "Fivo Sans Bold", sans-serif;
   font-weight: 700;
+}
+
+label {
+  font-family: "Fivo Sans Medium", sans-serif;
+  font-weight: 500;
 }
