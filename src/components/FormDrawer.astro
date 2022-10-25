@@ -4,20 +4,26 @@ import ThankYouVideo from "../images/placeholder.mp4";
 
 <style>
   video {
-    border-top-right-radius: 0 !important;
+    top: 25%;
   }
 
   #form-drawer {
     left: 100%;
+    /* left: 0; */
     transition-property: left;
     transition-duration: 250ms;
+    background-color: var(--dark);
+    background-image: url("../images/k-motif.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80em;
   }
 
   span {
     display: block;
     width: 24px;
     height: 2px;
-    background-color: var(--dark);
+    background-color: white;
     transition: transform 250ms;
   }
 
@@ -26,7 +32,7 @@ import ThankYouVideo from "../images/placeholder.mp4";
     display: block;
     width: 24px;
     height: 2px;
-    background-color: var(--dark);
+    background-color: white;
     content: "";
     top: 28px;
     transition: transform 250ms;
@@ -37,7 +43,7 @@ import ThankYouVideo from "../images/placeholder.mp4";
     display: block;
     width: 24px;
     height: 2px;
-    background-color: var(--dark);
+    background-color: white;
     content: "";
     top: 22px;
     transition-property: top, transform;
@@ -56,11 +62,6 @@ import ThankYouVideo from "../images/placeholder.mp4";
   span.isActive::after {
     top: 31px;
     transform: rotate(-45deg);
-  }
-
-  .form-container {
-    background-color: var(--dark);
-    border-top-left-radius: 0;
   }
 
   input {
@@ -89,125 +90,16 @@ import ThankYouVideo from "../images/placeholder.mp4";
   });
 </script>
 
-<div id="form-drawer" class="w-100 h-100 bg-white fixed top-0 dn z-999">
+<div id="form-drawer" class="w-100 h-100 bg-white fixed top-0">
   <!-- top -->
-  <div class="w-100 h3 flex items-center justify-end">
-    <div id="toggle" class="f7 ttu">
-      Close <span class="pl2 pr3 fr isActive"></span>
+  <div class="w-100 h3 absolute top-0">
+    <span id="toggle" class="w-2 h-100 pl2 pr3 fr isActive pointer"></span>
+
+    <div class="w-100 h2 flex items-end">
+      <h4 class="white w-100 pl4 ttu tracked mv1">Talk to me</h4>
     </div>
   </div>
+
+  <!-- video -->
+  <!-- TODO: Figure this out -->
 </div>
-
-<!-- <div
-  id="form-drawer"
-  class="w-100 bg-white z-999 justify-center ph0 top-0 fixed pb6 dn"
->
-  <div class="w-100 mw7 center overflow-scroll ph3 ph5-ns pb6">
-    <div class="w-100 h2 relative top-0">
-      <span id="toggle" class="fr isActive"></span>
-    </div>
-
-    <h2 class="f3 f3-ns lh-title tc">Contact Kevares Morgan</h2>
-
-    <div>
-      <video
-        class="w-100 br4 mv3"
-        controls
-        width="268"
-        playsinline
-        src={ThankYouVideo}></video>
-    </div>
-
-    <p class="f4-ns lh-copy">
-      The transcript of what Kevares says in the video. Lorem ipsum dolor sit
-      amet, consectetur adipisicing elit. Ab saepe mollitia iusto delectus
-      consequatur, voluptatum magni similique vero reiciendis consequuntur ipsum
-      qui culpa placeat, ducimus ad praesentium molestias aut eius.
-    </p>
-
-    <hr class="mv4" />
-
-    <div class="form-container pa3 br4 white">
-      <form action="">
-        <h3 class="ttu tracked tc">New Client Intake</h3>
-
-        <fieldset>
-          <legend class="tc">How would you like to work with me?</legend>
-          <div class="mv4">
-            <label class="pb2 db" for="buyer"
-              >Buy your next property with me.</label
-            >
-            <input
-              class="db pv4"
-              type="radio"
-              id="buyer"
-              name="client-relationship"
-              value="buyer"
-            />
-          </div>
-
-          <div class="mv4">
-            <label class="pb2 db" for="seller"
-              >Sell your property with me.</label
-            >
-            <input
-              class="db pv4"
-              type="radio"
-              id="seller"
-              name="client-relationship"
-              value="seller"
-            />
-          </div>
-        </fieldset>
-
-        <div class="mv4">
-          <label class="db mb2" for="first-name">First Name</label>
-          <input
-            class="w-100 pv2 pl2 br3 ba f5"
-            type="text"
-            name="first-name"
-            id="first-name"
-          />
-        </div>
-
-        <div class="mv4">
-          <label class="db mb2" for="last-name">Last Name</label>
-          <input
-            class="w-100 pv2 pl2 br3 ba f5"
-            type="text"
-            name="last-name"
-            id="last-name"
-          />
-        </div>
-
-        <div class="mv4">
-          <label class="db mb2" for="email">Email Address</label>
-          <input
-            class="w-100 pv2 pl2 br3 ba f5"
-            type="text"
-            name="email"
-            id="email"
-          />
-        </div>
-
-        <div class="mv4">
-          <label class="db mb2" for="phone">Phone Number</label>
-          <input
-            class="w-100 pv2 pl2 br3 ba b--black f5"
-            type="tel"
-            name="phone"
-            id="phone"
-          />
-        </div>
-
-        <div class="mt4">
-          <input
-            class="w-80 center db pa3 ba br4 white ttu"
-            type="submit"
-            value="Let's Talk"
-          />
-        </div>
-      </form>
-    </div>
-  </div>
-</div> -->

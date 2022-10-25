@@ -4,12 +4,12 @@
     xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
     xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <g>
-        <path d="M38.058,-0l-38.058,-0l0,213.125l38.058,-0l0,-94.688l87.686,94.688l46.583,-0l-101.387,-109.607l95.297,-103.518l-46.583,-0l-81.596,88.599l0,-88.599Z" style="fill:#293241;fill-rule:nonzero;"/>
+        <path d="M38.058,-0l-38.058,-0l0,213.125l38.058,-0l0,-94.688l87.686,94.688l46.583,-0l-101.387,-109.607l95.297,-103.518l-46.583,-0l-81.596,88.599l0,-88.599Z" style="fill:#ea481f;fill-rule:nonzero;"/>
         <clipPath id="_clip1">
             <path d="M200.536,0.004l-86.687,-0.543l-1.335,213.121l86.686,0.543l1.336,-213.121Z"/>
         </clipPath>
         <g clip-path="url(#_clip1)">
-            <path d="M213.898,213.217l-100.697,-110.24l95.944,-102.919" style="fill:#293241;fill-rule:nonzero;"/>
+            <path d="M213.898,213.217l-100.697,-110.24l95.944,-102.919" style="fill:#ea481f;fill-rule:nonzero;"/>
         </g>
     </g>
 </svg>
