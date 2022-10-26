@@ -28,6 +28,7 @@
 :root {
   /* Brand Colors */
   --primary: #ea481f;
+  --primary-dark: #701d0a;
   --dark: #293241;
 
   scroll-behavior: smooth;

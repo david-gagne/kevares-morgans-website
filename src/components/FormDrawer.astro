@@ -8,10 +8,18 @@
   }
 
   #form-drawer {
-    left: 100%;
+    /* left: 100%; */
+    left: 0;
     transition-property: left;
-    transition-duration: 250ms;
+    transition-duration: 400ms;
+  }
+
+  .form-drawer--inner {
     background-color: var(--dark);
+    background-image: url("../images/k-motif.svg");
+    background-position: center;
+    background-size: 156%;
+    background-repeat: no-repeat;
   }
 
   span.toggle {
@@ -77,25 +85,55 @@
 
 <script>
   let formDrawer = document.getElementById("form-drawer");
+  let formDrawerInner = document.querySelector("form-drawer--inner");
   let toggle = document.getElementById("toggle");
 
   toggle.addEventListener("click", function (event) {
     formDrawer.style.left = "100%";
 
     setTimeout(() => {
-      formDrawer.classList.remove("db");
+      formDrawer.classList.remove("flex");
       formDrawer.classList.add("dn");
-    }, 200);
+    }, 495);
 
     document.body.classList.remove("overflow-hidden");
   });
 </script>
 
-<div
+<div id="form-drawer" class="w-100 h-100 fixed top-0 flex justify-end">
+  <div
+    id="form-drawer--inner"
+    class="form-drawer--inner w-100 mw7 h-100 ph4 fixed"
+  >
+    <div class="w-100 h4 flex justify-between items-end mb4">
+      <div>
+        <h5 class="ttu white tracked f7 mv3">Talk to Kevares</h5>
+      </div>
+
+      <div id="toggle" class="flex items-center pointer pv3">
+        <p class="white mv0 ttu f7 tracked">Close</p>
+        <span class="toggle w-2 h-100 pl2 isActive"></span>
+      </div>
+    </div>
+
+    <div>
+      <div class="cf">
+        <div class="fl w-100 w-50-ns pr2 h-100">
+          <div class="outline bg-white pv4"></div>
+        </div>
+        <div class="fl w-100 w-50-ns pl2 h-100">
+          <div class="outline bg-white pv4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div
   id="form-drawer"
   class="w-100 h-100 fixed top-0 ph3 white overflow-scroll pb5 dn"
 >
-  <!-- top -->
+  
   <div class="w-100 h4 flex justify-between items-end mb4">
     <div>
       <h5 class="ttu white tracked f6 mv3">Talk to me</h5>
@@ -176,4 +214,4 @@
       </form>
     </div>
   </div>
-</div>
+</div> -->

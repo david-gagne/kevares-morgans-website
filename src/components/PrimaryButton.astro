@@ -11,7 +11,7 @@ const { ButtonText } = Astro.props;
     ctaButtons[i].addEventListener("click", function (event) {
       if (formDrawer.classList.contains("dn")) {
         formDrawer.classList.remove("dn");
-        formDrawer.classList.add("db");
+        formDrawer.classList.add("flex");
 
         setTimeout(() => {
           formDrawer.style.left = "0";
@@ -22,7 +22,7 @@ const { ButtonText } = Astro.props;
         formDrawer.style.left = "100%";
 
         setTimeout(() => {
-          formDrawer.classList.remove("db");
+          formDrawer.classList.remove("flex");
           formDrawer.classList.add("dn");
         }, 200);
 
