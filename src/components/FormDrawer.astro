@@ -12,13 +12,14 @@
     left: 0;
     transition-property: left;
     transition-duration: 400ms;
+    overflow: scroll;
   }
 
   .form-drawer--inner {
     background-color: var(--dark);
     background-image: url("../images/k-motif.svg");
     background-position: center;
-    background-size: 156%;
+    background-size: 141rem;
     background-repeat: no-repeat;
   }
 
@@ -28,6 +29,7 @@
     height: 2px;
     background-color: white;
     transition: transform 250ms;
+    padding-bottom: 0.15em;
   }
 
   span::before {
@@ -67,15 +69,23 @@
     transform: rotate(-45deg);
   }
 
-  input {
+  label {
+    font-family: "Fivo Sans Medium", sans-serif;
+    font-weight: 500;
+  }
+
+  input,
+  select {
     border-color: var(--dark);
     color: var(--dark);
     font-family: "Fivo Sans Medium";
   }
 
   input[type="submit"] {
-    background-color: var(--primary);
+    background-color: #fff;
     font-family: "Fivo Sans Medium", sans-serif;
+    border-color: #fff;
+    color: var(--primary);
   }
 
   .contact-information {
@@ -96,57 +106,27 @@
       formDrawer.classList.add("dn");
     }, 495);
 
-    document.body.classList.remove("overflow-hidden");
+    document.body.style.overflow = "scroll";
   });
 </script>
 
-<div id="form-drawer" class="w-100 h-100 fixed top-0 flex justify-end">
+<div id="form-drawer" class="w-100 h-100 fixed top-0 justify-end z-999 dn">
   <div
     id="form-drawer--inner"
-    class="form-drawer--inner w-100 mw7 h-100 ph4 fixed"
+    class="form-drawer--inner w-100 mw6 h-100 ph3 ph4-ns fixed overflow-scroll"
   >
     <div class="w-100 h4 flex justify-between items-end mb4">
       <div>
-        <h5 class="ttu white tracked f7 mv3">Talk to Kevares</h5>
+        <h5 class="ttu white tracked f7 mv3">Contact Kevares</h5>
       </div>
 
-      <div id="toggle" class="flex items-center pointer pv3">
+      <div id="toggle" class="flex items-center pointer mv3">
         <p class="white mv0 ttu f7 tracked">Close</p>
         <span class="toggle w-2 h-100 pl2 isActive"></span>
       </div>
     </div>
 
     <div>
-      <div class="cf">
-        <div class="fl w-100 w-50-ns pr2 h-100">
-          <div class="outline bg-white pv4"></div>
-        </div>
-        <div class="fl w-100 w-50-ns pl2 h-100">
-          <div class="outline bg-white pv4"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- <div
-  id="form-drawer"
-  class="w-100 h-100 fixed top-0 ph3 white overflow-scroll pb5 dn"
->
-  
-  <div class="w-100 h4 flex justify-between items-end mb4">
-    <div>
-      <h5 class="ttu white tracked f6 mv3">Talk to me</h5>
-    </div>
-
-    <div id="toggle" class="flex items-center pointer pv3">
-      <p class="white mv0 ttu f7">Close</p>
-      <span class="toggle w-2 h-100 pl2 isActive"></span>
-    </div>
-  </div>
-
-  <div class="w-100 pv2">
-    <div class="pb5">
       <div style="padding:56.27% 0 0 0;position:relative;">
         <iframe
           class="br4"
@@ -156,17 +136,34 @@
           title="placeholder.mp4"></iframe>
       </div>
 
-      <p class="transcript lh-copy f4-ns">
+      <p class="transcript lh-copy f4-ns white">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
         repudiandae nemo fugiat perferendis. Obcaecati vero sed quam quas
         doloribus esse facilis facere fugit labore earum, minima magnam
         aspernatur quis asperiores.
       </p>
-    </div>
 
-    <div>
-      <form action="" class="flex flex-column">
-        <label class="f4 flex justify-between items-center" for="first-name">
+      <form action="" class="flex flex-column mt5">
+        <label
+          class="f4 flex justify-between items-center white"
+          for="relationship-select"
+          >Subject <span class="normal ttu f7 tracked">Required *</span>
+        </label>
+        <select
+          class="pa3 f4 mt1 mb4 ba b--white br2"
+          name="client-relationship"
+          id="relationship-select"
+        >
+          <option value="">Choose an option</option>
+          <option value="Buyer">Buy your next property with me</option>
+          <option value="Seller">Sell your property with me</option>
+          <option value="Agent">Partner with me</option>
+        </select>
+
+        <label
+          class="f4 flex justify-between items-center white"
+          for="first-name"
+        >
           First name <span class="normal ttu f7 tracked">Required *</span>
         </label>
         <input
@@ -176,7 +173,10 @@
           class="pa3 f4 mt1 mb4 ba b--white br2"
         />
 
-        <label class="f4 flex justify-between items-center" for="last-name">
+        <label
+          class="f4 flex justify-between items-center white"
+          for="last-name"
+        >
           Last name <span class="normal ttu f7 tracked">Required *</span>
         </label>
         <input
@@ -186,7 +186,7 @@
           class="pa3 f4 mt1 mb4 ba b--white br2"
         />
 
-        <label class="f4 flex justify-between items-center" for="email">
+        <label class="f4 flex justify-between items-center white" for="email">
           Email address <span class="normal ttu f7 tracked">Required *</span>
         </label>
         <input
@@ -196,7 +196,7 @@
           class="pa3 f4 mt1 mb4 ba b--white br2"
         />
 
-        <label class="f4 flex justify-between items-center" for="phone">
+        <label class="f4 flex justify-between items-center white" for="phone">
           Phone number <span class="normal ttu f7 tracked">Required *</span>
         </label>
         <input
@@ -207,11 +207,11 @@
         />
 
         <input
-          class="ttu pa3 white br4 mb4 ba tracked w-60 center"
+          class="ttu pa3 br4 mb4 ba tracked w-60 center"
           type="submit"
           value="Let's Talk"
         />
       </form>
     </div>
   </div>
-</div> -->
+</div>
