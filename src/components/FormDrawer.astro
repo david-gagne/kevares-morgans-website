@@ -2,14 +2,13 @@
 ---
 
 <style>
-  video {
+  iframe {
     top: 25%;
     border-top-left-radius: 0 !important;
   }
 
   #form-drawer {
     left: 100%;
-    /* left: 0; */
     transition-property: left;
     transition-duration: 250ms;
     background-color: var(--dark);
@@ -62,11 +61,17 @@
 
   input {
     border-color: var(--dark);
+    color: var(--dark);
+    font-family: "Fivo Sans Medium";
   }
 
   input[type="submit"] {
     background-color: var(--primary);
     font-family: "Fivo Sans Medium", sans-serif;
+  }
+
+  .contact-information {
+    height: 80vh;
   }
 </style>
 
@@ -78,7 +83,7 @@
     formDrawer.style.left = "100%";
 
     setTimeout(() => {
-      formDrawer.classList.remove("flex");
+      formDrawer.classList.remove("db");
       formDrawer.classList.add("dn");
     }, 200);
 
@@ -102,73 +107,73 @@
     </div>
   </div>
 
-  <!-- body columns -->
-  <div class="center">
-    <div class="cf">
-      <!-- video and form -->
-      <div class="fl w-100 w-50-ns pv2 pr2-ns">
-        <div class="pb4">
-          <div style="padding:56.27% 0 0 0;position:relative;">
-            <iframe
-              src="https://player.vimeo.com/video/763621193?h=c76eb3f59f&badge=0&autopause=0&player_id=0&app_id=58479"
-              frameborder="0"
-              allow="fullscreen"
-              allowfullscreen
-              style="position:absolute;top:0;left:0;width:100%;height:100%;"
-              title="placeholder.mp4"></iframe>
-          </div>
-
-          <p class="transcript lh-copy">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-            repudiandae nemo fugiat perferendis. Obcaecati vero sed quam quas
-            doloribus esse facilis facere fugit labore earum, minima magnam
-            aspernatur quis asperiores.
-          </p>
-        </div>
-
-        <div>
-          <form action="" class="flex flex-column">
-            <label
-              class="f4 flex justify-between items-center"
-              for="first-name"
-            >
-              First name <span class="normal ttu f7 tracked">Required *</span>
-            </label>
-            <input
-              type="text"
-              name="first-name"
-              id="first-name"
-              class="pt1 pb3 mt1 mb4 ba b--white br2"
-            />
-
-            <label class="f4 flex justify-between items-center" for="last-name">
-              Last name <span class="normal ttu f7 tracked">Required *</span>
-            </label>
-            <input
-              type="text"
-              name="last-name"
-              id="last-name"
-              class="pt1 pb3 mt1 mb4 ba b--white br2"
-            />
-
-            <label class="f4 flex justify-between items-center" for="email">
-              Email address <span class="normal ttu f7 tracked">Required *</span
-              >
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="pt1 pb3 mt1 mb4 ba b--white br2"
-            />
-          </form>
-        </div>
+  <div class="w-100 pv2">
+    <div class="pb5">
+      <div style="padding:56.27% 0 0 0;position:relative;">
+        <iframe
+          class="br4"
+          src="https://player.vimeo.com/video/763621193?h=c76eb3f59f&badge=0&autopause=0&player_id=0&app_id=58479"
+          frameborder="0"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          title="placeholder.mp4"></iframe>
       </div>
 
-      <!-- general contact information -->
-      <div class="fl w-100 w-50-ns pv2 pl2-ns">
-        <div class="outline bg-white pv4"></div>
-      </div>
+      <p class="transcript lh-copy f4-ns">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+        repudiandae nemo fugiat perferendis. Obcaecati vero sed quam quas
+        doloribus esse facilis facere fugit labore earum, minima magnam
+        aspernatur quis asperiores.
+      </p>
+    </div>
+
+    <div>
+      <form action="" class="flex flex-column">
+        <label class="f4 flex justify-between items-center" for="first-name">
+          First name <span class="normal ttu f7 tracked">Required *</span>
+        </label>
+        <input
+          type="text"
+          name="first-name"
+          id="first-name"
+          class="pa3 f4 mt1 mb4 ba b--white br2"
+        />
+
+        <label class="f4 flex justify-between items-center" for="last-name">
+          Last name <span class="normal ttu f7 tracked">Required *</span>
+        </label>
+        <input
+          type="text"
+          name="last-name"
+          id="last-name"
+          class="pa3 f4 mt1 mb4 ba b--white br2"
+        />
+
+        <label class="f4 flex justify-between items-center" for="email">
+          Email address <span class="normal ttu f7 tracked">Required *</span>
+        </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="pa3 f4 mt1 mb4 ba b--white br2"
+        />
+
+        <label class="f4 flex justify-between items-center" for="phone">
+          Phone number <span class="normal ttu f7 tracked">Required *</span>
+        </label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          class="pa3 f4 mt1 mb4 ba b--white br2"
+        />
+
+        <input
+          class="ttu pa3 white br4 mb4 ba tracked w-60 center"
+          type="submit"
+          value="Let's Talk"
+        />
+      </form>
     </div>
   </div>
 </div>
