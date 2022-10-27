@@ -12,6 +12,7 @@
     transition-property: left;
     transition-duration: 400ms;
     overflow: scroll;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .form-drawer--inner {
@@ -31,7 +32,7 @@
     padding-bottom: 0.15em;
   }
 
-  span::before {
+  span.isActive::before {
     position: relative;
     display: block;
     width: 24px;
@@ -42,7 +43,7 @@
     transition: transform 250ms;
   }
 
-  span::after {
+  span.isActive::after {
     position: relative;
     display: block;
     width: 24px;
@@ -87,6 +88,12 @@
     color: var(--primary);
   }
 
+  input:focus,
+  select:focus {
+    border-color: var(--primary) !important;
+    outline: var(--primary) !important;
+  }
+
   .contact-information {
     height: 80vh;
   }
@@ -94,7 +101,6 @@
 
 <script>
   let formDrawer = document.getElementById("form-drawer");
-  let formDrawerInner = document.querySelector("form-drawer--inner");
   let toggle = document.getElementById("toggle");
 
   toggle.addEventListener("click", function (event) {
@@ -146,12 +152,13 @@
         <label
           class="f4 flex justify-between items-center white"
           for="relationship-select"
-          >Subject <span class="normal ttu f7 tracked">Required *</span>
+          >Subject <span class="normal ttu f7 tracked label">Required *</span>
         </label>
         <select
           class="pa3 f4 mt1 mb4 ba b--white br2"
           name="client-relationship"
           id="relationship-select"
+          required
         >
           <option value="">Choose an option</option>
           <option value="Buyer">Buy your next property with me</option>
@@ -163,7 +170,7 @@
           class="f4 flex justify-between items-center white"
           for="first-name"
         >
-          First name <span class="normal ttu f7 tracked">Required *</span>
+          First name <span class="normal ttu f7 tracked label">Required *</span>
         </label>
         <input
           type="text"
@@ -176,7 +183,7 @@
           class="f4 flex justify-between items-center white"
           for="last-name"
         >
-          Last name <span class="normal ttu f7 tracked">Required *</span>
+          Last name <span class="normal ttu f7 tracked label">Required *</span>
         </label>
         <input
           type="text"
@@ -186,7 +193,9 @@
         />
 
         <label class="f4 flex justify-between items-center white" for="email">
-          Email address <span class="normal ttu f7 tracked">Required *</span>
+          Email address <span class="normal ttu f7 tracked label"
+            >Required *</span
+          >
         </label>
         <input
           type="email"
@@ -196,7 +205,9 @@
         />
 
         <label class="f4 flex justify-between items-center white" for="phone">
-          Phone number <span class="normal ttu f7 tracked">Required *</span>
+          Phone number <span class="normal ttu f7 tracked label"
+            >Required *</span
+          >
         </label>
         <input
           type="tel"
