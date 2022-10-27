@@ -10,12 +10,11 @@ const { ButtonText } = Astro.props;
   for (let i = 0; i < ctaButtons.length; i++) {
     ctaButtons[i].addEventListener("click", function (event) {
       if (formDrawer.classList.contains("dn")) {
-        formDrawer.classList.remove("dn");
-        formDrawer.classList.add("flex");
+        formDrawer.classList.replace("dn", "flex");
 
         setTimeout(() => {
           formDrawer.style.left = "0";
-        }, 200);
+        }, 100);
 
         document.body.style.overflow = "hidden";
       } else {
@@ -24,7 +23,7 @@ const { ButtonText } = Astro.props;
         setTimeout(() => {
           formDrawer.classList.remove("flex");
           formDrawer.classList.add("dn");
-        }, 200);
+        }, 100);
 
         document.body.style.overflow = "scroll";
       }
