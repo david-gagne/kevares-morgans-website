@@ -1,0 +1,38 @@
+---
+const { ProcessStep, StepDescription } = Astro.props;
+---
+
+<style>
+  article {
+    background-color: var(--primary);
+    border-top-left-radius: 0 !important; /* Not sure why, but this doesn't take effect without the !important declaration in this case... */
+    left: 0;
+    transition-property: left;
+    transition-duration: 350ms;
+  }
+
+  .leave-left {
+    left: -100%;
+  }
+
+  .leave-right {
+    left: 100%;
+  }
+
+  .enter-left {
+    left: 0;
+  }
+
+  .enter-right {
+    left: 0;
+  }
+</style>
+
+<article
+  class="w-100 mw6 center flex justify-center items-center pa4 white br4 tl relative"
+>
+  <div>
+    <h3 class="f5">{ProcessStep}</h3>
+    <p class="lh-copy">{StepDescription}</p>
+  </div>
+</article>

@@ -1,0 +1,60 @@
+---
+---
+
+<script>
+  // Step 1. Define element variables
+  let carouselItems = document.querySelector(".carousel-items");
+  let leftCarouselButton = document.getElementById("carousel-button-left");
+  let rightCarouselButton = document.getElementById("carousel-button-right");
+
+  // Step 2. Loop over carousel items.
+  for (let i = 0; i < carouselItems.children.length; i++) {
+    // Step 3. Set left carousel button state to inactive if first carousel item is displayed.
+    if (carouselItems.children[i] === carouselItems.children[0]) {
+      leftCarouselButton.classList.add("inactive");
+    }
+  }
+
+  // Step 4. Animate carousel items to exit left when user clicks right button.
+  rightCarouselButton.addEventListener("click", function (event) {
+    if (carouselItems.children[0].classList.contains("flex")) {
+      carouselItems.children[0].children[0].classList.add("leave-left");
+
+      setTimeout(() => {
+        carouselItems.children[0].classList.replace("flex", "dn");
+      }, 350);
+    }
+  });
+</script>
+
+<style>
+  button:nth-child(1) {
+    background-color: var(--primary);
+    border-bottom-right-radius: 0;
+  }
+
+  button:nth-child(2) {
+    background-color: var(--primary);
+    border-bottom-left-radius: 0;
+  }
+
+  .inactive {
+    cursor: default !important;
+    opacity: 0.5;
+  }
+</style>
+
+<div class="w4 center flex justify-center items-center h3">
+  <button
+    id="carousel-button-left"
+    class="w2 h2 br2 bn flex items-center justify-center mt3 mh3 pointer"
+  >
+    <i class="bi bi-chevron-left white"></i>
+  </button>
+  <button
+    id="carousel-button-right"
+    class="w2 h2 br2 bn flex items-center justify-center mt3 mh3 pointer"
+  >
+    <i class="bi bi-chevron-right white"></i>
+  </button>
+</div>

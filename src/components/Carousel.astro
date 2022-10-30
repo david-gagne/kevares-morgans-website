@@ -1,39 +1,41 @@
 ---
-const { ProcessStep, StepDescription } = Astro.props;
+import CarouselArticle from "./CarouselArticle.astro";
+import CarouselButtons from "./CarouselButtons.astro";
 ---
 
-<style>
-  article {
-    background-color: var(--primary);
-    border-top-left-radius: 0 !important; /* Not sure why, but this doesn't take effect without the !important declaration in this case... */
-  }
-
-  button:nth-child(1) {
-    background-color: var(--primary);
-    border-bottom-right-radius: 0;
-  }
-
-  button:nth-child(2) {
-    background-color: var(--primary);
-    border-bottom-left-radius: 0;
-  }
-</style>
-
-<article
-  class="w-100 mw6 center flex justify-center items-center pa4 white br4 tl"
->
-  <div>
-    <h3 class="f5">{ProcessStep}</h3>
-    <p class="lh-copy">{StepDescription}</p>
-  </div>
-</article>
-
-<!-- TODO: Separate out the Carousel Buttons into their own component. -->
-<div class="w4 center flex justify-center items-center h3">
-  <button class="w2 h2 br2 bn flex items-center justify-center mt3 mh3 pointer">
-    <i class="bi bi-chevron-left white"></i>
-  </button>
-  <button class="w2 h2 br2 bn flex items-center justify-center mt3 mh3 pointer">
-    <i class="bi bi-chevron-right white"></i>
-  </button>
+<!-- TODO: Come back to this with a fresh mind tomorrow. -->
+<div class="carousel-item flex">
+  <!-- Step 1 -->
+  <CarouselArticle
+    ProcessStep="1. Listen"
+    StepDescription="I'm a paragraph that describes this step in the process. I should be between three and five sentences. And I should be in written the the first-person."
+  />
 </div>
+
+<div class="carousel-item dn">
+  <!-- Step 2 -->
+  <CarouselArticle
+    ProcessStep="2. Search"
+    StepDescription="I'm a paragraph that describes this step in the process. I should be between three and five sentences. And I should be in written the the first-person."
+  />
+</div>
+
+<div class="carousel-item dn">
+  <!-- Step 3 -->
+  <CarouselArticle
+    ProcessStep="3. Review"
+    StepDescription="I'm a paragraph that describes this step in the process. I should be between three and five sentences. And I should be in written the the first-person."
+  />
+</div>
+
+<div class="carousel-item dn">
+  <!-- Step 4 -->
+  <CarouselArticle
+    ProcessStep="4. Close"
+    StepDescription="I'm a paragraph that describes this step in the process. I should be between three and five sentences. And I should be in written the the first-person."
+  />
+</div>
+
+<!-- BUTTONS -->
+
+<CarouselButtons />
