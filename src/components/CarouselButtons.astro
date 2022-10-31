@@ -19,10 +19,61 @@
   rightCarouselButton.addEventListener("click", function (event) {
     if (carouselItems.children[0].classList.contains("flex")) {
       carouselItems.children[0].children[0].classList.add("leave-left");
+      leftCarouselButton.classList.remove("inactive");
 
       setTimeout(() => {
         carouselItems.children[0].classList.replace("flex", "dn");
-      }, 350);
+        carouselItems.children[1].classList.replace("dn", "flex");
+        carouselItems.children[0].children[0].classList.remove("leave-left");
+      }, 320);
+    } else if (carouselItems.children[1].classList.contains("flex")) {
+      carouselItems.children[1].children[0].classList.add("leave-left");
+
+      setTimeout(() => {
+        carouselItems.children[1].classList.replace("flex", "dn");
+        carouselItems.children[2].classList.replace("dn", "flex");
+        carouselItems.children[1].children[0].classList.remove("leave-left");
+      }, 320);
+    } else if (carouselItems.children[2].classList.contains("flex")) {
+      carouselItems.children[2].children[0].classList.add("leave-left");
+      rightCarouselButton.classList.add("inactive");
+
+      setTimeout(() => {
+        carouselItems.children[2].classList.replace("flex", "dn");
+        carouselItems.children[3].classList.replace("dn", "flex");
+        carouselItems.children[2].children[0].classList.remove("leave-left");
+      }, 320);
+    }
+  });
+
+  // Step 5. Animate carousel items to enter from left when user clicks left button.
+  leftCarouselButton.addEventListener("click", function (event) {
+    if (carouselItems.children[3].classList.contains("flex")) {
+      carouselItems.children[3].children[0].classList.add("leave-right");
+      rightCarouselButton.classList.remove("inactive");
+
+      setTimeout(() => {
+        carouselItems.children[3].classList.replace("flex", "dn");
+        carouselItems.children[2].classList.replace("dn", "flex");
+        carouselItems.children[3].children[0].classList.remove("leave-right");
+      }, 320);
+    } else if (carouselItems.children[2].classList.contains("flex")) {
+      carouselItems.children[2].children[0].classList.add("leave-right");
+
+      setTimeout(() => {
+        carouselItems.children[2].classList.replace("flex", "dn");
+        carouselItems.children[1].classList.replace("dn", "flex");
+        carouselItems.children[2].children[0].classList.remove("leave-right");
+      }, 320);
+    } else if (carouselItems.children[1].classList.contains("flex")) {
+      carouselItems.children[1].children[0].classList.add("leave-right");
+      leftCarouselButton.classList.add("inactive");
+
+      setTimeout(() => {
+        carouselItems.children[1].classList.replace("flex", "dn");
+        carouselItems.children[0].classList.replace("dn", "flex");
+        carouselItems.children[1].children[0].classList.remove("leave-right");
+      }, 320);
     }
   });
 </script>
