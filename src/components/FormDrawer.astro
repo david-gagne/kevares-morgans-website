@@ -118,7 +118,7 @@
 <div id="form-drawer" class="w-100 h-100 fixed top-0 justify-end z-999 dn">
   <div
     id="form-drawer--inner"
-    class="form-drawer--inner w-100 mw6 h-100 ph3 ph4-ns fixed overflow-scroll"
+    class="form-drawer--inner w-100 mw8 h-100 ph3 ph4-ns fixed overflow-scroll"
   >
     <div class="w-100 h4 flex justify-between items-end mb4">
       <div>
@@ -131,98 +131,105 @@
       </div>
     </div>
 
-    <div>
-      <div style="padding:56.27% 0 0 0;position:relative;">
-        <iframe
-          class="br4"
-          src="https://player.vimeo.com/video/763621193?h=c76eb3f59f&badge=0&autopause=0&player_id=0&app_id=58479"
-          frameborder="0"
-          allowfullscreen
-          style="position:absolute;top:0;left:0;width:100%;height:100%;"
-          title="placeholder.mp4"></iframe>
-      </div><script src="https://player.vimeo.com/api/player.js"></script>
+    <div class="cf">
+      <div class="fl w-100 w-50-ns pr3-ns">
+        <div style="padding:56.27% 0 0 0;position:relative;">
+          <iframe
+            class="br4"
+            src="https://player.vimeo.com/video/763621193?h=c76eb3f59f&badge=0&autopause=0&player_id=0&app_id=58479"
+            frameborder="0"
+            allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            title="placeholder.mp4"></iframe>
+        </div><script src="https://player.vimeo.com/api/player.js"></script>
 
-      <p class="transcript lh-copy f4-ns white">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-        repudiandae nemo fugiat perferendis. Obcaecati vero sed quam quas
-        doloribus esse facilis facere fugit labore earum, minima magnam
-        aspernatur quis asperiores.
-      </p>
+        <p class="transcript lh-copy f4-ns white">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+          repudiandae nemo fugiat perferendis. Obcaecati vero sed quam quas
+          doloribus esse facilis facere fugit labore earum, minima magnam
+          aspernatur quis asperiores.
+        </p>
+      </div>
 
-      <form action="" class="flex flex-column mt5">
-        <label
-          class="f4 flex justify-between items-center white"
-          for="relationship-select"
-          >Subject <span class="normal ttu f7 tracked label">Required *</span>
-        </label>
-        <select
-          class="pa3 f4 mt1 mb4 ba b--white br2"
-          name="client-relationship"
-          id="relationship-select"
-          required
-        >
-          <option value="">Choose an option</option>
-          <option value="Buyer">Buy your next property with me</option>
-          <option value="Seller">Sell your property with me</option>
-          <option value="Agent">Partner with me</option>
-        </select>
-
-        <label
-          class="f4 flex justify-between items-center white"
-          for="first-name"
-        >
-          First name <span class="normal ttu f7 tracked label">Required *</span>
-        </label>
-        <input
-          type="text"
-          name="first-name"
-          id="first-name"
-          class="pa3 f4 mt1 mb4 ba b--white br2"
-        />
-
-        <label
-          class="f4 flex justify-between items-center white"
-          for="last-name"
-        >
-          Last name <span class="normal ttu f7 tracked label">Required *</span>
-        </label>
-        <input
-          type="text"
-          name="last-name"
-          id="last-name"
-          class="pa3 f4 mt1 mb4 ba b--white br2"
-        />
-
-        <label class="f4 flex justify-between items-center white" for="email">
-          Email address <span class="normal ttu f7 tracked label"
-            >Required *</span
+      <div class="fl w-100 w-50-ns pl3-ns">
+        <form action="" class="flex flex-column mt5 mt0-ns">
+          <label
+            class="f4 flex justify-between items-center white"
+            for="relationship-select"
+            >Subject <span class="normal ttu f7 tracked label">Required *</span>
+          </label>
+          <select
+            class="pa3 f4 mt1 mb4 ba b--white br2"
+            name="client-relationship"
+            id="relationship-select"
+            required
           >
-        </label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          class="pa3 f4 mt1 mb4 ba b--white br2"
-        />
+            <option value="">Choose an option</option>
+            <option value="Buyer">Buy your next property with me</option>
+            <option value="Seller">Sell your property with me</option>
+            <option value="Agent">Partner with me</option>
+          </select>
 
-        <label class="f4 flex justify-between items-center white" for="phone">
-          Phone number <span class="normal ttu f7 tracked label"
-            >Required *</span
+          <label
+            class="f4 flex justify-between items-center white"
+            for="first-name"
           >
-        </label>
-        <input
-          type="tel"
-          name="phone"
-          id="phone"
-          class="pa3 f4 mt1 mb4 ba b--white br2"
-        />
+            First name <span class="normal ttu f7 tracked label"
+              >Required *</span
+            >
+          </label>
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            class="pa3 f4 mt1 mb4 ba b--white br2"
+          />
 
-        <input
-          class="ttu pa3 br4 mb4 ba tracked w-60 center"
-          type="submit"
-          value="Let's Talk"
-        />
-      </form>
+          <label
+            class="f4 flex justify-between items-center white"
+            for="last-name"
+          >
+            Last name <span class="normal ttu f7 tracked label">Required *</span
+            >
+          </label>
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            class="pa3 f4 mt1 mb4 ba b--white br2"
+          />
+
+          <label class="f4 flex justify-between items-center white" for="email">
+            Email address <span class="normal ttu f7 tracked label"
+              >Required *</span
+            >
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="pa3 f4 mt1 mb4 ba b--white br2"
+          />
+
+          <label class="f4 flex justify-between items-center white" for="phone">
+            Phone number <span class="normal ttu f7 tracked label"
+              >Required *</span
+            >
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            class="pa3 f4 mt1 mb4 ba b--white br2"
+          />
+
+          <input
+            class="ttu pa3 br4 mb4 ba tracked w-60 center"
+            type="submit"
+            value="Let's Talk"
+          />
+        </form>
+      </div>
     </div>
   </div>
 </div>
