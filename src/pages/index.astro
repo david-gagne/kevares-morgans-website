@@ -26,6 +26,14 @@ import "@fontsource/caramel";
     color: var(--dark);
   }
 
+  #contact.bg-dark {
+    background-color: var(--dark);
+  }
+
+  #contact .eyebrow {
+    color: white !important;
+  }
+
   .icon {
     width: 50px;
     height: 50px;
@@ -110,14 +118,14 @@ import "@fontsource/caramel";
 <Layout>
   <!-- Hero Section -->
   <section id="hero" class="ph3 tc mb3">
-    <h1 class="f2 f1-ns lh-copy measure-narrow center">
+    <h1 class="f3 f2-m f1-l lh-copy measure-narrow center">
       Discover the finest properties South Florida has to offer with the
       guidance of a lifelong native.
     </h1>
 
     <p class="f4-ns lh-copy pb4 measure center">
-      As a bonafide South Florida native, I'm equipped to help you find your
-      dream property in less time.
+      As a bonafide South Florida native, I'm exceptionally equipped to help you
+      find your dream property in less time.
     </p>
 
     <div class="w-100 flex justify-center">
@@ -145,13 +153,13 @@ import "@fontsource/caramel";
 
             <p class="f4-ns lh-copy">
               Hey there, my name is Kevares Morgan. I'm a licensed real estate
-              agent and member of the National Association of REALTORS&reg;. I'm
-              committed to helping others live more comfortably. To that end, I
-              founded <a
+              agent and member of the National Association of REALTORS&reg;.
+              Born and raised in sunny South Florida, I'm committed to helping
+              others live more comfortably. To that end, I founded <a
                 class="link underline dark"
                 href="https://zoomtaxesandsolutions.com"
                 >Zoom Taxes &amp; Solutions</a
-              >, a tax preparation consultancy in 2011.
+              >, a boutique tax preparation consultancy in 2011.
             </p>
 
             <p class="f4-ns lh-copy">
@@ -162,9 +170,9 @@ import "@fontsource/caramel";
 
             <p class="f4-ns lh-copy">
               So, whether you're looking to purchase a beachfront vaction home
-              in a tropical climate to get the family away from those frigid
-              winters in the Hamptons or you're a money-rich, time-poor real
-              estate investor looking to gain an edge in the South Florida
+              in the tropical SoFlo climate to get the family away from those
+              frigid winters in the Hamptons or you're a money-rich, time-poor
+              real estate investor looking to gain an edge in the South Florida
               market, I'm you're agent.
             </p>
 
@@ -182,7 +190,10 @@ import "@fontsource/caramel";
     <div class="mw8 center">
       <p class="ttu eyebrow tracked">Specialties</p>
 
-      <h2 class="f4 f3-ns lh-title">A clever, punchy section intro title.</h2>
+      <h2 class="f4 f3-ns lh-title measure-narrow">
+        Bringing an exceptional customer service experience to South Florida
+        real estate.
+      </h2>
 
       <div class="center">
         <div class="cf">
@@ -192,9 +203,9 @@ import "@fontsource/caramel";
             <h3 class="f5 f4-ns mb2 lh-title">Residential Home Sales</h3>
 
             <p class="f4-ns lh-copy mt0 measure-narrow-l">
-              I'm a paragraph that describes the specialty. I should be between
-              three and five sentences. And I should be in written the the
-              first-person.
+              Whether you are buying a home or selling, as your agent on
+              residential property deals, you can rest assured that I will be
+              highly available to support you throughout the entire process.
             </p>
           </div>
 
@@ -204,9 +215,11 @@ import "@fontsource/caramel";
             <h3 class="f5 f4-ns mb2 lh-title">Residential Investments</h3>
 
             <p class="f4-ns lh-copy mt0 measure-narrow-ns">
-              I'm a paragraph that describes the specialty. I should be between
-              three and five sentences. And I should be in written the the
-              first-person.
+              Residential property investment requires the help of an agent who
+              can effectively locate properties that match your financial goals.
+              My background in the financial services space makes me uniquely
+              equipped to understand your ROI requirements as they relate to
+              finding you the perfect investment property.
             </p>
           </div>
         </div>
@@ -220,9 +233,11 @@ import "@fontsource/caramel";
             <h3 class="f5 f4-ns mb2 lh-title">Commercial Sales</h3>
 
             <p class="f4-ns lh-copy mt0 measure-narrow-ns">
-              I'm a paragraph that describes the specialty. I should be between
-              three and five sentences. And I should be in written the the
-              first-person.
+              Buying commercial property involves working with a wealth of
+              nuance. More than just considering things such as foot traffic, I
+              rely on my rich local understanding of the entire South Florida
+              landscape to help you and the stakeholders you represent secure
+              the best commercial spaces on the market.
             </p>
           </div>
           <div class="fl w-100 w-50-ns pv2 pl3-ns">
@@ -231,9 +246,10 @@ import "@fontsource/caramel";
             <h3 class="f5 f4-ns mb2 lh-title">Commercial Leasing</h3>
 
             <p class="f4-ns lh-copy mt0 measure-narrow-ns">
-              I'm a paragraph that describes the specialty. I should be between
-              three and five sentences. And I should be in written the the
-              first-person.
+              As a commercial leasing agent, I focus my time and attention
+              around matching clients in a lessor/lessee relationship that I
+              feel confident will be most mutually beneficial to the party's
+              long-term success.
             </p>
           </div>
         </div>
@@ -245,11 +261,11 @@ import "@fontsource/caramel";
   <section id="process" class="ph3 pv3 tc">
     <div class="mw8 center mv4">
       <p class="ttu eyebrow tracked">Process</p>
-      <h2 class="f4 f3-ns lh-title mb4">
-        A clever, punchy section intro title.
+      <h2 class="f4 f3-ns lh-copy mb4 measure center">
+        Every client is unique, so I adapt my process to work with you and it
+        goes something like this.
       </h2>
 
-      <!-- TODO: Carousel componenet goes here -->
       <div class="carousel-items">
         <Carousel />
       </div>
@@ -257,15 +273,17 @@ import "@fontsource/caramel";
   </section>
 
   <!-- Commitment Section -->
-  <section id="commitment" class="ph3 pv4 mv3">
-    <div class="center w-100 h-100 mw6 flex items-center justify-center">
+  <section id="commitment" class="ph3 pv5 mv3">
+    <div class="center w-100 h-100 mw7 flex items-center justify-center">
       <div class="ph3">
-        <h4 class="f2 f1-ns normal mv0">My Commitment to You</h4>
-        <p class="f4-ns lh-copy">
+        <h4 class="f2 f-subheadline-ns normal mv0">My Commitment to You</h4>
+        <p class="f4-ns lh-copy measure">
           <em
-            >A thoughtful and heartfelt dedication to your clients that lets
-            them know you care.</em
-          >
+            >In my role as your fiduciary and real estate sales professional I
+            will make myself available for every critical piece of business as
+            it relates to providing you an exceptional experience in your search
+            for and securing of a piece of real property.
+          </em>
           <br /><br />
 
           &mdash; Kevares
@@ -275,13 +293,12 @@ import "@fontsource/caramel";
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="ph3 pv5">
-    <div class="mw6 center">
-      <p class="ttu eyebrow tracked tc">Contact</p>
+  <section id="contact" class="ph3 pv5 bg-dark">
+    <div class="mw7 center">
+      <p class="ttu eyebrow tracked tc mv0 pv0">Contact</p>
 
-      <h2 class="f4 f3-ns lh-title mb3 tc">
-        A final call-to-action that resonates with your client's finished story
-        benefit.
+      <h2 class="f2 f1-ns lh-copy pv4 tc white mv0">
+        South Florida real estate is calling your name.
       </h2>
 
       <div class="flex justify-center">
@@ -289,8 +306,6 @@ import "@fontsource/caramel";
       </div>
     </div>
   </section>
-
-  <hr class="mw8 o-40" />
 
   <FormDrawer />
 </Layout>

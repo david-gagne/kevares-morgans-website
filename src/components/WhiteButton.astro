@@ -1,0 +1,52 @@
+---
+const { ButtonText } = Astro.props;
+---
+
+<!-- CONTACT MODAL BUTTON -->
+<script>
+  let ctaButtons = document.getElementsByClassName("button button--cta");
+  let formDrawer = document.getElementById("form-drawer");
+
+  for (let i = 0; i < ctaButtons.length; i++) {
+    ctaButtons[i].addEventListener("click", function (event) {
+      if (formDrawer.classList.contains("dn")) {
+        formDrawer.classList.replace("dn", "flex");
+
+        setTimeout(() => {
+          formDrawer.style.left = "0";
+        }, 100);
+
+        document.body.style.overflow = "hidden";
+      } else {
+        formDrawer.style.left = "100%";
+
+        setTimeout(() => {
+          formDrawer.classList.remove("flex");
+          formDrawer.classList.add("dn");
+        }, 100);
+
+        document.body.style.overflow = "scroll";
+      }
+    });
+  }
+</script>
+
+<style>
+  button {
+    font-family: "Fivo Sans Medium", sans-serif;
+    font-weight: 500;
+    background-color: var(--primary);
+    width: 10rem;
+    height: 3.125rem;
+  }
+
+  .primary {
+    color: var(--primary);
+  }
+</style>
+
+<button
+  class="button button--cta primary tc bn br4 flex justify-center items-center ttu tracked pointer bg-white"
+>
+  {ButtonText}
+</button>
